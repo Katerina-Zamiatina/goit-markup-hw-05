@@ -33,7 +33,7 @@ img {
 	white-space: nowrap;
 }
 
-.list {
+ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -214,7 +214,8 @@ img {
 
 	background-color: #2f303a;
 	text-align: center;
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url("../images/hero/hero.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -301,19 +302,19 @@ img {
 }
 
 .icon-mark::before {
-	background-image: url(../images/antenna.svg);
+	background-image: url(../images/features/antenna.svg);
 }
 
 .icon-punctuality::before {
-	background-image: url(../images/clock.svg);
+	background-image: url(../images/features/clock.svg);
 }
 
 .icon-scheduling::before {
-	background-image: url(../images/diagram.svg);
+	background-image: url(../images/features/diagram.svg);
 }
 
 .icon-technology::before {
-	background-image: url(../images/astronaut.svg);
+	background-image: url(../images/features/astronaut.svg);
 }
 
 /* Work */
@@ -327,11 +328,30 @@ img {
 }
 
 .work .item {
+	position: relative;
 	flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .work .item:not(:last-child) {
 	margin-right: 30px;
+}
+
+.work-action {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: 0;
+	padding: 27px 82px;
+
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.1;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--text-white);
+	background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* STAFF */
@@ -520,7 +540,7 @@ img {
 	fill: var(--text-white);
 }
 
-.footer .social-item:not(:last-child) {
+.page-footer .social-item:not(:last-child) {
 	margin-right: 10px;
 }
 
@@ -543,6 +563,7 @@ img {
 	font-size: 16px;
 	line-height: 1.6;
 	letter-spacing: 0.03em;
+	cursor: pointer;
 }
 
 .button-item:not(:last-child) {
