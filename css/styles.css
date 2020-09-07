@@ -146,6 +146,8 @@ ul {
 	padding-top: 30px;
 	padding-bottom: 30px;
 
+	position: relative;
+
 	color: var(--title-text-color);
 	font-weight: 500;
 	font-size: 14px;
@@ -160,6 +162,17 @@ ul {
 
 .site-nav .link.current {
 	color: var(--accent-color);
+}
+
+.site-nav .link.current::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	height: 4px;
+	width: 100%;
+	border-radius: 2px;
+	background-color: var(--accent-color);
 }
 
 /* contacts */
@@ -347,7 +360,6 @@ ul {
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 1.1;
-	text-align: center;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--text-white);
